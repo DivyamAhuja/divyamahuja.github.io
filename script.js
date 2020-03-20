@@ -23,8 +23,8 @@ void main(){
 
   vec2 z = c;
   float iterations = 0.0;
-  float maxIterations = 2000.0;
-  const int imaxIterations = 2000;
+  float maxIterations = 100.0;
+  const int imaxIterations = 100;
 
   for(int i = 0; i < imaxIterations; i++){
     float t = 2.0 * z.x * z.y + c.y;
@@ -37,7 +37,7 @@ void main(){
 
     iterations += 1.0;
   }
-  float x = sqrt(iterations * 0.005);
+  float x = sqrt(iterations * 0.025);
   gl_FragColor = vec4(0.0 + x, 0.0 + x, 0.0 + x, 1.0);
 }
 
@@ -119,10 +119,8 @@ function Init(){
     gl.uniform4fv(uniforms.mSize, mSize);
 
     gl.drawArrays(gl.TRIANGLES, 0, 6);
-
-    requestAnimationFrame(loop);
   }
-  requestAnimationFrame(loop);
+  loop();
   function OnResize(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -135,6 +133,7 @@ function Init(){
     mSize[2] -= (newRealRange - oldRealRange)/2;
 
     gl.viewport(0, 0, canvas.width, canvas.height);
+    loop();
   };
   function OnMouseZoom(e){
     var imaginaryRange = mSize[1] - mSize[0];
@@ -161,6 +160,7 @@ function Init(){
       mSize[1] += iDelta;
       mSize[2] -= rDelta;
       mSize[3] -= rDelta;
+      loop();
     }
   }
   window.addEventListener('resize', OnResize);
