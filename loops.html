@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Loops</title>
+        <style>
+            .box{
+                display: inline-block;
+                text-align: left;
+                width: 400px;
+                height: 400px;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style='text-align: center;'>Javascript Loops</h1>
+        <br>
+        <div style='text-align: center;'>
+            <label>Enter a number: </label>
+            <input id='input_N' value='0' type='text'>
+        </div>
+        <div style="text-align: center;">
+            <br>
+            <div id='box1' class='box'></div>
+            <br>
+            <div id='box2' class='box'></div>
+            <br>
+            <div id='box3' class='box'></div>
+        </div>
+        <script>
+            var box1 = document.getElementById('box1');
+            var box2 = document.getElementById('box2');
+            var box3 = document.getElementById('box3');
+            document.getElementById('input_N').addEventListener('input',(e) => {
+                let n = Number(e.target.value)
+                n = n > 100 ? 100 : n;
+                box1.innerHTML = '';
+                let str = '';
+                for(let i=0; i < n; i++){
+                    for(let j=0; j < i+1; j++){
+                        str += '*';
+                    }
+                    str += '<br>';
+                }
+                box1.innerHTML = str;
+
+                
+                box2.innerHTML = '';
+                let i=0;
+                str='';
+                while(i < n){
+                    let j = 0;
+                    while(j < i + 1){
+                        str += '* ';
+                        j++;
+                    }
+                    str += '<br>';
+                    i++;
+                }
+                box2.innerHTML = str;
+
+                box3.innerHTML = '';
+                str = '';
+                i = 0;
+                do{
+                    let j=0;
+                    do{
+                        str += '*  *';
+                        j++;
+                    }while(j < i+1);
+                    str += '<br>';
+                    i++;
+                }while(i < n);
+                box3.innerHTML = str;
+            });
+        </script>
+    </body>
+</html>
