@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions Javascript</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Functions</h1>
+        <br>
+        <pre>
+            Functions are block of code designed to perform a particular task.
+            A Javascript function executes when 'something' invokes it (calls it).
+
+            Syntax:
+
+            function function_name(function_arguments){
+                ...function_body
+                return return_value //function may or may not return something
+            }
+
+            or ( ES6 syntax )
+
+            const function_name = (function_arguments) => {
+                ...function_body
+                return return_value
+            }
+
+            Calling a function:
+
+            function_name(args);
+            or
+            var result = function_name(args);
+
+            example:
+            const add = (a, b) => {
+                return a+b;
+            };
+            This function will add a and b, and will return their sum.
+        </pre>
+        <div><pre>
+            <label>Number 1: <input type='number' id='num_a' value='0'/></label><br>
+            <label>Number 2: <input type='number' id='num_b' value='0'/></label>
+                    
+                        <button id='add_btn' onclick='func()'>Add</button>
+            
+            <span id='sum'>Sum: 0</spanp>
+        </pre></div>
+        <hr>
+        <pre>
+            This code uses two functions add() and func().
+
+            const add = (a, b) => {
+                return a + b;
+            };
+
+            function func(){
+                var a = Number(document.getElementById('num_a').value);
+                var b = Number(document.getElementById('num_b').value);
+
+                document.getElementById('sum').innerHTML = 'Sum: ' + add(a,b);
+            }
+
+            &lt;button id='add_btn' onclick='func()'&gt;Add&lt;/button&gt;
+
+            When Button is clicked func() function is invoked,
+            it takes input from both input fields and adds them and
+            update element with id 'sum' and displays result.
+        </pre>
+        <script>
+            const add = (a, b) => {
+                return a + b;
+            };
+            function func(){
+                var a = Number(document.getElementById('num_a').value);
+                var b = Number(document.getElementById('num_b').value);
+
+                document.getElementById('sum').innerHTML = 'Sum: ' + add(a,b);
+            }
+
+        </script>
+    </body>
+</html>
