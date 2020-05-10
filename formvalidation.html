@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name = 'viewport' content="width= device-width",initial scale = 1>
+    <script type = "text/javascript">
+      function ShowPass(){
+        var x = document.getElementById('pass1');
+        if(x.type === 'password'){
+          x.type = 'text';
+        }
+        else{
+          x.type = 'password';
+        }
+        var y = document.getElementById('pass2');
+        if(y.type === 'password'){
+          y.type = 'text';
+        }
+        else{
+          y.type = 'password';
+        }
+
+      }
+
+      function MatchPass() {
+        var x = document.getElementById('pass1').value;
+        var y = document.getElementById('pass2').value;
+
+        if(x != y){
+          window.alert('Passwords Do Not Match');
+          return false;
+        }
+        return true;
+      }
+    </script>
+
+  </head>
+  <body>
+    <script src="info.js" type = "text/javascript"></script>
+    <header>DEENBANDHU CHOTU RAM UNIVERSITY OF SCIENCE AND TECHNOLOGY</header>
+    <hr style="border : 2px solid black;">
+    <br>
+    <div class = "box">
+      <form onsubmit="MatchPass()" action = "test">
+        <h2 class = "heading"> Student Information </h2>
+        <hr class = "blwhead">
+        <div class = "row">
+          <div class = "col-15">
+            <label for="first name"> Name</label>
+          </div>
+          <div class = "col-25" id = 'name'>
+            <input type = "text" name = 'nam' placeholder="First Name" pattern='[A-Za-z\\s]*'/ required>
+          </div>
+          <div class = "col-25" id = 'name'>
+            <input type = "text" name = 'nam' placeholder="Middle Name">
+          </div>
+          <div class = "col-25" id = 'name'>
+            <input type = "text" name = 'nam' placeholder="Surname">
+          </div>
+        </div>
+        <br>
+        <hr>
+        <div class = "row">
+          <div class ="sixty">
+            <div class = "col-15">
+              <label for="Roll No">RollNo</label>
+            </div>
+            <div class = "Roll Number">
+              <input type= "number" name="roll number" required>
+            </div>
+          </div>
+          <div class = "thirty">
+            <div class = "col-15 gen">
+            <label for="Gender"> Gender </label>
+            </div>
+            <div class = "gender">
+              <select id = "Sex" name = "Gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br>
+        <hr>
+        <div class = "row">
+          <div class = "col-15">
+            <label for="Branch">Branch</label>
+          </div>
+          <div class = 'Branch'>
+          <select id = branch name="branch">
+            <option>Computer Science Engineering</option>
+            <option>Electronics and Communication Engineering</option>
+            <option>Electrical engineering</option>
+            <option>Mechanical Engineering</option>
+            <option>Civil Engineering</option>
+            <option>Chemical Engineering</option>
+            <option>Information Technology Engineering</option>
+            <option>Biomedical Engineering</option>
+            <option>BioTechnology Engineering</option>
+          </select>
+          </div>
+        </div>
+        <br>
+        <hr>
+        <div class = "row">
+          <div class="Mother">
+            <div class = "col-15 mother">
+              <label for="mother name"> Mother</label>
+            </div>
+            <div class = "mot">
+              <input type = "text" name = 'nam' placeholder="Mother Name" pattern='[A-Za-z\ \s]*'/ required>
+            </div>
+          </div>
+          <div class="Father">
+            <div class = "col-15 father">
+              <label for="father name">Father</label>
+            </div>
+            <div class = "fat">
+              <input type = "text" name = 'nam' placeholder="Father Name" pattern='[A-Za-z\ \s]*'/ required>
+            </div>
+          </div>
+          <div class="Contact">
+            <div class = "col-15 Cont">
+              <label for="Contact">Phone</label>
+            </div>
+            <div class = "Phone">
+              <input type = "tel" placeholder="Phone Number" pattern="[0-9]{10}" required>
+            </div>
+          </div>
+        </div>
+        <br>
+        <hr>
+        <div class = "row">
+          <div class = "col-15">
+            <label for="email">Email</label>
+          </div>
+          <div class = "Email">
+            <input type = "email" placeholder="Enter Your Email ID" required>
+          </div>
+          
+          <br>
+
+          <div class = "col-15">
+            <label for="Password">Password</label>
+          </div>
+          <div class = "Password">
+            <div class = "pas">
+              <input type = "password" id = 'pass1' placeholder="Enter Password" required>
+            </div>
+            <div class = "pas">
+              <input type = "password" id = 'pass2' placeholder="Confirm Password" required>
+            </div>
+            <br>
+            <input type = "checkbox" onclick="ShowPass()">Show Password
+          </div>
+        </div>
+        <br>
+        <hr>
+        <div class = "row">
+          <div class = "reset">
+            <button type = "reset">Clear</button>
+          </div>
+          <div class = "submit">
+            <button type = "submit" onclick="MatchPass()">Submit here </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="info.js" type = "text/javascript"></script>
+  </body>
+</html>
