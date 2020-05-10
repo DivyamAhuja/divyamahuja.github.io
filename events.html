@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Events</title>
+    </head>
+    <script>
+        function inputFocus(){
+            document.getElementById('txt').innerHTML = 'You just focused on text input. Text input gained the focus.';
+        }
+
+        function inputBlur(){
+            document.getElementById('txt').innerHTML = 'You just lost focus from text input. Text input lost the focus.';
+        }
+        function changeColorRed(){
+            document.getElementById('color-text').style.color = "red";
+        }
+        function changeColorBlue(){
+            document.getElementById('color-text').style.color = "blue";
+        }
+        function handleChange(e){
+            document.getElementById('header'). innerHTML = e.target.value;
+        }
+    </script>
+    <body onload="alert('Welcome :) ')" onunload="alert('Byeee :) ')">
+        <center>
+        <h1 id='header' onmouseover='handleChange({target: {value: "Hi There"}})' onmouseout="handleChange({target: {value: 'Javascript Events'}})">
+                Javascript Events
+            </h1>
+            <p>Click on this text input to focus on it.</p><br>
+            <input type='text' placeholder="Write Something" onfocus="inputFocus()" onblur="inputBlur()" onchange="handleChange(event)"><br>
+            <p id='txt'>&nbsp;</p>
+            <div id='color-text' onclick="changeColorRed()" ondblclick="changeColorBlue()">
+                <p style="user-select: none;">Click on this text to change it's color to Red. Double click on color to change it to blue.</p>
+            </div>
+        </center>
+    </body>
+</html>
