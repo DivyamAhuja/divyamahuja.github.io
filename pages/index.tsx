@@ -50,8 +50,8 @@ const Home: NextPage = () => {
         <h1 className=" text-transparent bg-clip-text bg-gradient-to-r from-[#ff004a] to-[#ff00e4] md:text-6xl text-4xl font-extrabold py-2">
           I&apos;m Divyam Ahuja
         </h1>
-        <h2 className=" text-transparent bg-clip-text bg-gradient-to-r from-[#ff004a] to-[#ff00e4] md:text-3xl text-2xl font-bold my-1">
-          I Code. Watch Anime. 
+        <h2 className=" text-transparent bg-clip-text bg-gradient-to-r from-[#ff004a] to-[#ff00e4] md:text-3xl text-2xl font-bold my-1 text-center">
+          FullStack Alchemist &middot; I Code Stuff &amp; Watch Anime. 
         </h2>
         <div className=" flex my-4">
           {
