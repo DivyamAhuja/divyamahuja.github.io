@@ -47,10 +47,10 @@ const Home: NextPage = () => {
       </div>
       <main className=" flex flex-1 min-h-screen justify-center items-center flex-col ">
         <div className=" w-36 h-36 m-3 bg-contain rounded-full bg-[url('https://avatars.githubusercontent.com/u/39771050?v=4')]" />
-        <h1 className=" text-transparent bg-clip-text bg-gradient-to-r from-[#ff004a] to-[#ff00e4] md:text-6xl text-4xl font-extrabold py-2">
+        <h1 className=" text-transparent bg-clip-text bg-gradient-to-r from-[#ff004a] to-[#ff00a6] md:text-6xl text-4xl font-extrabold py-2">
           I&apos;m Divyam Ahuja
         </h1>
-        <h2 className=" text-transparent bg-clip-text bg-gradient-to-r from-[#ff004a] to-[#ff00e4] md:text-3xl text-2xl font-bold my-1 text-center">
+        <h2 className=" text-transparent bg-clip-text bg-gradient-to-r from-[#ff004a] to-[#ff00a6] md:text-3xl text-2xl font-bold my-1 text-center">
           FullStack Alchemist &middot; I Code Stuff &amp; Watch Anime. 
         </h2>
         <div className=" flex my-4">
