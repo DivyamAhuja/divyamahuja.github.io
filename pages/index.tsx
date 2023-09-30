@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faDev, faTwitter, faGitlab } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faDev, faTwitter, faGitlab, faHashnode } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faFile, faFileLines, faSquareFull } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 
@@ -13,8 +13,8 @@ const Links = [
     icon: faGithub
   },
   {
-    url: "https://dev.to/divyamahuja",
-    icon: faDev
+    url: "https://blog.divyam.dev",
+    icon: faHashnode
   },
   {
     url: "https://twitter.com/ahujadivyam",
