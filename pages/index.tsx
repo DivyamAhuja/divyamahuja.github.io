@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           I&apos;m Divyam Ahuja
         </h1>
         <h2 className=" text-transparent bg-clip-text bg-gradient-to-r from-[#ff004a] to-[#ff00a6] md:text-3xl text-2xl font-bold my-1 text-center">
-          FullStack Alchemist &middot; I Code Stuff &amp; Watch Anime. 
+          FullStack Alchemist &middot; I Code Stuff. 
         </h2>
         <div className=" flex my-4">
           {
